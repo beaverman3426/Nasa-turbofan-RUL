@@ -1,2 +1,2 @@
 # Nasa turbofan RUL
-Nasa turbofan RUL  predictor using TCN and BiLSTM 
+Nasa turbofan RUL  predictor using BiLSTM 
