@@ -22,7 +22,7 @@ The NASA CMAPSS dataset simulates turbofan engine degradation under various oper
 ### Sensor Measurements
 The dataset includes 21 sensors monitoring engine parameters. The table below describes the sensors:
 
-![Sensor Measurements](https://www.researchgate.net/publication/348384089/figure/tbl2/AS:978772178239493@1610368880327/Data-description-of-turbofan-engine-sensor.png)
+![Sensor Measurements](/Data-description-of-turbofan-engine-sensor.png)
 
 These sensors measure physical properties like temperature, pressure, and flow rates, which degrade as the engine nears failure.
 
