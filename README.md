@@ -103,5 +103,5 @@ To enhance the model's performance, consider the following:
 - **Window Size Tuning**: Experiment with different window sizes to balance short-term and long-term dependencies.
 - **Advanced Architectures**: Incorporate attention mechanisms or transformers to focus on critical time steps in the sequence.
 - **Regularization**: Increase dropout or add L2 regularization to prevent overfitting.
-- **Ensemble Methods**: Combine predictions from multiple models (e.g., BiLSTM + TCN) for improved robustness.
+- **Ensemble Methods**: Combine predictions from multiple models (e.g., [BiLSTM + TCN](https://www.mdpi.com/2076-3417/15/4/1702)) for improved robustness.
 - **Data Augmentation**: Apply techniques like noise injection to enhance the model's generalization to unseen engine units.
