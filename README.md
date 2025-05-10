@@ -38,6 +38,23 @@ scaler = StandardScaler()
 df_train[features] = scaler.fit_transform(df_train[features])
 df_test[features] = scaler.transform(df_test[features]) 
 ```
+## Windowing
+
+The dataset is a time-series problem, requiring sequential sensor readings to be processed. **Windowing** is used to prepare the data for the BiLSTM model.
+
+### What is Windowing?
+
+Windowing splits time-series data into fixed-size sequences (windows) of consecutive cycles. For example, a window of 30 cycles includes sensor readings for 30 time steps, with the RUL at the last time step as the target.
+
+### How it Works
+
+For each engine, sequences of length `window_size` are extracted using a sliding window approach. The input data becomes a 3D tensor of shape `(samples, window_size, features)`, and the output is the RUL for the last time step in the sequence.
+
+### Why is it Important?
+
+- **Captures Temporal Dependencies**: Time-series models like LSTMs require sequential input to capture temporal dependencies in the data.
+- **Learn Degradation Patterns**: Windowing allows the model to learn degradation patterns over time by providing context for the sensor readings at each cycle.
+- **Balance Efficiency and Accuracy**: It balances capturing long-term trends (larger windows) with computational efficiency (smaller windows), ensuring the model can generalize well without being computationally expensive.
 
 ### LSTM Choice
 Long Short-Term Memory (LSTM) networks are well-suited for time-series data because they can capture long-term dependencies and handle vanishing gradient issues. In the CMAPSS dataset, engine degradation patterns evolve over many cycles, making LSTMs ideal.
